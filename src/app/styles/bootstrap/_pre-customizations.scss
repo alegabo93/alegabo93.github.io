@@ -1,0 +1,27 @@
+// Color Palette
+// - B
+$color-black: #000;
+// - O
+$color-outer-space: #263238;
+// - T
+$color-thunderbird: #cd181a;
+// - W
+$color-white: #fff;
+$color-wild-sand: #f4f4f4;
+
+//== Typography
+$font-family-sans: "Open Sans", sans-serif !default;
+$font-family-serif: "Helvetica", sans-serif !default;
+$font-family-base: $font-family-sans !default;
+$font-size-base: 15px !default;
+$font-size-large: 20px !default;
+
+// == Container sizes
+$container-xl-desktop: 1446px !default;
+
+//** Global text color on `<body>`.
+$text-color: $color-outer-space !default;
+
+//== Grid system
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
