@@ -10,7 +10,14 @@ function App() {
     <Grid>
       <Row>
         <Col md={12}>
-          <PostsContainer />
+          <div className="flexbox-container">
+            <div className="sidebar">
+              <p>hola mundo</p>
+            </div>
+            <div className="content">
+              <PostsContainer />
+            </div>
+          </div>
         </Col>
       </Row>
     </Grid>

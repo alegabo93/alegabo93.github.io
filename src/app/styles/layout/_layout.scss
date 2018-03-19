@@ -1,0 +1,19 @@
+.flexbox-container {
+  display: flex;
+  display: -webkit-flex;
+  overflow: hidden;
+  height: 100%;
+
+  > .sidebar {
+    flex: 3;
+    -webkit-flex: 3;
+    background-color: $main-color;
+  }
+
+  > .content {
+    flex: 9;
+    -webkit-flex: 9;
+    overflow-y: auto;
+    background-color: $color-white;
+  }
+}
