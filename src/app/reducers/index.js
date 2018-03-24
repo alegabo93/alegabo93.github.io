@@ -3,11 +3,11 @@ import { combineReducers } from "redux";
 import { routerReducer as routing } from "react-router-redux";
 
 // Own actions/constants/components
-import posts from "./Posts";
+import user from "./User";
 
 const rootReducer = combineReducers({
   routing,
-  posts
+  user
 });
 
 export default rootReducer;
