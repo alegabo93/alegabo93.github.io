@@ -13,7 +13,7 @@ const user = (state = initialState, action) => {
         ...state,
         isFetching: true,
         error: null,
-        data: []
+        data: null
       };
     case "USER_FULFILLED": {
       return {
