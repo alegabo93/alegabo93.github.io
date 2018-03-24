@@ -1,5 +1,4 @@
-// Reducers for posts
-
+// Reducers for user profile
 const initialState = {
   isFetching: false,
   error: null,
