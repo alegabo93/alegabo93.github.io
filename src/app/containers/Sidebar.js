@@ -2,25 +2,26 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Row, Col, Image } from "react-bootstrap";
+import { Col } from "react-bootstrap";
+
+// Own actions/constants/components
+import Avatar from "Components/Avatar";
 
 function Sidebar({ profile }) {
-  const { avatar_url: avatar, name } = profile;
+  const { avatar_url: img, name, bio, login } = profile;
   return (
     <Col md={12}>
-      <Row>
-        <Col md={12}>
-          <Image src={avatar} circle responsive />
-          <h3 className="text-center">{name}</h3>
-        </Col>
-      </Row>
+      <Avatar img={img} name={name} ocupation={bio} username={login} />
     </Col>
   );
 }
 
 Sidebar.propTypes = {
   profile: PropTypes.shape({
-    avatar_url: PropTypes.string
+    avatar_url: PropTypes.string,
+    name: PropTypes.string,
+    bio: PropTypes.string,
+    login: PropTypes.string
   }).isRequired
 };
 

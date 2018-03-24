@@ -12,7 +12,8 @@ import getUserData from "Actions/User";
 class App extends Component {
   static propTypes = {
     getUsers: PropTypes.func.isRequired,
-    loading: PropTypes.bool.isRequired
+    loading: PropTypes.bool.isRequired,
+    hasData: PropTypes.bool.isRequired
   };
 
   componentWillMount() {
@@ -20,7 +21,7 @@ class App extends Component {
   }
 
   render() {
-    const { loading } = this.props;
+    const { loading, hasData } = this.props;
 
     return (
       <Grid>
@@ -28,18 +29,19 @@ class App extends Component {
           <Col md={12}>
             {loading && <Spinner />}
 
-            {!loading && (
-              <div className="flexbox-container">
-                <div className="sidebar">
-                  <Col md={12}>
-                    <Sidebar />
-                  </Col>
+            {!loading &&
+              hasData && (
+                <div className="flexbox-container">
+                  <div className="sidebar">
+                    <Col md={12}>
+                      <Sidebar />
+                    </Col>
+                  </div>
+                  <div className="content">
+                    <h1>Hola Mundo</h1>
+                  </div>
                 </div>
-                <div className="content">
-                  <h1>Hola Mundo</h1>
-                </div>
-              </div>
-            )}
+              )}
           </Col>
         </Row>
       </Grid>
@@ -49,7 +51,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    loading: state.user.isFetching
+    loading: state.user.isFetching,
+    hasData: state.user.data !== null
   };
 }
 
