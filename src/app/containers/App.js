@@ -6,11 +6,13 @@ import { Grid, Row, Col } from "react-bootstrap";
 
 // Own actions/constants/components
 import Sidebar from "Containers/Sidebar";
+import Spinner from "Components/Spinner";
 import getUserData from "Actions/User";
 
 class App extends Component {
   static propTypes = {
-    getUsers: PropTypes.func.isRequired
+    getUsers: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired
   };
 
   componentWillMount() {
@@ -18,20 +20,26 @@ class App extends Component {
   }
 
   render() {
+    const { loading } = this.props;
+
     return (
       <Grid>
         <Row>
           <Col md={12}>
-            <div className="flexbox-container">
-              <div className="sidebar">
-                <Col md={12}>
-                  <Sidebar />
-                </Col>
+            {loading && <Spinner />}
+
+            {!loading && (
+              <div className="flexbox-container">
+                <div className="sidebar">
+                  <Col md={12}>
+                    <Sidebar />
+                  </Col>
+                </div>
+                <div className="content">
+                  <h1>Hola Mundo</h1>
+                </div>
               </div>
-              <div className="content">
-                <h1>Hola Mundo</h1>
-              </div>
-            </div>
+            )}
           </Col>
         </Row>
       </Grid>
@@ -39,6 +47,12 @@ class App extends Component {
   }
 }
 
-export default connect(null, {
+function mapStateToProps(state) {
+  return {
+    loading: state.user.isFetching
+  };
+}
+
+export default connect(mapStateToProps, {
   getUsers: getUserData
 })(App);
