@@ -1,3 +1,3 @@
 // Constants for production environment
-const defaultApiUrl = "http://jsonplaceholder.typicode.com";
+const defaultApiUrl = "https://api.github.com/";
 export default defaultApiUrl;
