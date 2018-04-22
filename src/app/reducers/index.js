@@ -4,10 +4,12 @@ import { routerReducer as routing } from "react-router-redux";
 
 // Own actions/constants/components
 import user from "./User";
+import presentation from "./PresentationData";
 
 const rootReducer = combineReducers({
   routing,
-  user
+  user,
+  presentation
 });
 
 export default rootReducer;
