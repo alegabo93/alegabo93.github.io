@@ -1,0 +1,46 @@
+.presentation-block {
+  margin: 20px 0;
+
+  > .title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background-color: $accent-color;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  > .list {
+    padding: 0 10px;
+
+    > .item {
+      margin: 10px 0;
+      color: $color-white;
+    }
+
+    > .item > .fa {
+      float: left;
+      margin-right: 10px;
+      color: $accent-text;
+      font-size: 20px;
+    }
+
+    > .item > .subtitle {
+      display: inline;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    > .item > .description {
+      margin: 0;
+      color: $color-white;
+    }
+
+    > .item > .description.-spaced {
+      margin-left: 30px;
+      font-style: italic;
+    }
+  }
+}
