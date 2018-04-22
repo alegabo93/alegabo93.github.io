@@ -1,5 +1,29 @@
-._text-bold { font-weight: bold; }
+/* =========================
+ * Text utilities
+ * ========================*/
+
+._text-center { text-align: center; }
+._text-right { text-align: right; }
+._text-left { text-align: left; }
+
+._text-uppercase { text-transform: uppercase; }
+._text-lowercase { text-transform: lowercase; }
+._text-capitalize { text-transform: capitalize; }
+
 ._text-light { font-weight: 300; }
+._text-normal { font-weight: 400; }
+._text-medium { font-weight: 500; }
+._text-semibold { font-weight: 700; }
+._text-bold { font-weight: 900; }
+
+/* =========================
+ * Color utilities
+ * ========================*/
+
 ._text-danger { color: $color-thunderbird; }
+
+/* =========================
+ * Spacing utilities
+ * ========================*/
 
 ._unmargin { margin: 0; }

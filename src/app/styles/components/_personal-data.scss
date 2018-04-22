@@ -1,0 +1,12 @@
+.personal-data {
+  margin: 20px 0;
+}
+
+.info-block > .name,
+.info-block > .occupation {
+  color: $color-white;
+}
+
+.info-block > .occupation > .username {
+  color: $accent-text;
+}

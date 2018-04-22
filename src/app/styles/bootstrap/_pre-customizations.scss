@@ -3,8 +3,11 @@
 $color-alabaster: #f9f9f9;
 // - B
 $color-black: #000;
+$color-blumine: #1a4d67;
 // - C
 $color-curious-blue: #39c;
+// - M
+$color-matisse: #21749e;
 // - O
 $color-outer-space: #263238;
 // - T
@@ -15,11 +18,13 @@ $color-wild-sand: #f4f4f4;
 
 //== Color definition
 $main-color: $color-curious-blue;
+$accent-color: $color-matisse;
+$accent-text: $color-blumine;
 
 //== Typography
-$font-family-sans: "Open Sans", sans-serif !default;
-$font-family-serif: "Helvetica", sans-serif !default;
-$font-family-base: $font-family-sans !default;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+$font-family-roboto: "Roboto", sans-serif !default;
+$font-family-base: $font-family-roboto !default;
 $font-size-base: 15px !default;
 $font-size-large: 20px !default;
 

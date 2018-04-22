@@ -3,21 +3,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Row, Col, Image } from "react-bootstrap";
 
-function Avatar({ img, name, ocupation, username }) {
+function PersonalData({ img, name, occupation, username }) {
   return (
-    <div className="avatar">
+    <div className="personal-data">
       <Row>
         <Col md={10} mdOffset={1}>
           <Image src={img} circle responsive />
         </Col>
       </Row>
       <Row>
-        <Col md={12}>
-          <h2 className="text-center">{name}</h2>
-          <h4 className="text-center">
-            {ocupation}
+        <Col md={12} className="info-block">
+          <h2 className="name _text-center">{name}</h2>
+          <h4 className="occupation _text-center">
+            {occupation}
             <br />
-            <small>@{username}</small>
+            <small className="username">@{username}</small>
           </h4>
         </Col>
       </Row>
@@ -25,11 +25,11 @@ function Avatar({ img, name, ocupation, username }) {
   );
 }
 
-Avatar.propTypes = {
+PersonalData.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  ocupation: PropTypes.string.isRequired,
+  occupation: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired
 };
 
-export default Avatar;
+export default PersonalData;
