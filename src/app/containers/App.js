@@ -6,6 +6,7 @@ import { Grid, Row, Col } from "react-bootstrap";
 
 // Own actions/constants/components
 import Sidebar from "Containers/Sidebar";
+import Content from "Containers/Content";
 import Spinner from "Components/Spinner";
 import getUserData from "Actions/User";
 
@@ -38,7 +39,9 @@ class App extends Component {
                     </Col>
                   </div>
                   <div className="content">
-                    <h1>Hola Mundo</h1>
+                    <Col md={12}>
+                      <Content />
+                    </Col>
                   </div>
                 </div>
               )}
