@@ -1,0 +1,18 @@
+.business-card {
+  margin: 15px 0;
+  padding: 20px;
+
+  &.-filled {
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 2px 2px 5px 0 $color-alto;
+  }
+
+  > .title {
+    margin: 10px 0;
+    color: $main-color;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 22px;
+  }
+}

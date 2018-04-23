@@ -1,0 +1,41 @@
+.time-line {
+  margin: 30px 0 10px;
+}
+
+.time-event {
+  > .line {
+    text-align: right;
+  }
+
+  > .line > .year {
+    display: inline-block;
+    padding: 0 20px;
+    border: 1px solid $main-color;
+  }
+
+  > .content {
+    position: relative;
+    border-left: 2px solid $main-color;
+  }
+
+  > .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main-color;
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+
+  > .content > .title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  > .content > .detail {
+    margin: 10px 0 20px;
+  }
+}
